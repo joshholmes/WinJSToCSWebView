@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7A544809-B560-4DC8-B4B1-D823A4A724FD}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileAccessCS</RootNamespace>
+    <AssemblyName>FileAccessCS</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>FileAccessCS_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\..\sharedcontent\js\microsoft.winjs\fonts\Symbols.ttf">
+      <Link>Microsoft.WinJS.4.0\fonts\Symbols.ttf</Link>
+    </Content>
+    <None Include="FileAccessCS_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\sharedcontent\js\microsoft.winjs\js\en-us\ui.strings.js">
+      <Link>Microsoft.WinJS.4.0\js\en-US\ui.strings.js</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\js\sample-utils\footer.html">
+      <Link>sample-utils\footer.html</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\js\sample-utils\header.html">
+      <Link>sample-utils\header.html</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\js\sample-utils\sample-utils.js">
+      <Link>sample-utils\sample-utils.js</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\js\sample-utils\scenario-select.css">
+      <Link>sample-utils\scenario-select.css</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\js\sample-utils\scenario-select.html">
+      <Link>sample-utils\scenario-select.html</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\microsoft-sdk.png">
+      <Link>images\microsoft-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\smalltile-sdk.png">
+      <Link>images\smalltile-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\splash-sdk.png">
+      <Link>images\splash-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\squaretile-sdk.png">
+      <Link>images\squaretile-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\storelogo-sdk.png">
+      <Link>images\storelogo-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\tile-sdk.png">
+      <Link>images\tile-sdk.png</Link>
+    </Content>
+    <Content Include="..\..\sharedcontent\media\windows-sdk.png">
+      <Link>images\windows-sdk.png</Link>
+    </Content>
+    <Content Include="css\default.css" />
+    <Content Include="default.html" />
+    <Content Include="html\scenario10_DeleteAFile.html" />
+    <Content Include="html\scenario11_TryToGetAFileWithoutGettingAnError.html" />
+    <Content Include="html\scenario1_CreateAFileInThePicturesLibrary.html" />
+    <Content Include="html\scenario2_GetTheParentFolderOfAFile.html" />
+    <Content Include="html\scenario3_WriteAndReadTextInAFile.html" />
+    <Content Include="html\scenario4_WriteAndReadBytesInAFile.html" />
+    <Content Include="html\scenario5_WriteAndReadAFileUsingAStream.html" />
+    <Content Include="html\scenario6_DisplayFileProperties.html" />
+    <Content Include="html\scenario7_TrackAFileOrFolderSoThatYouCanAccessItLater.html" />
+    <Content Include="html\scenario8_CopyAFile.html" />
+    <Content Include="html\scenario9_CompareTwoFilesToSeeIfTheyAreTheSame.html" />
+    <Content Include="js\default.js" />
+    <Content Include="js\sample-configuration.js" />
+    <Content Include="js\scenario10_DeleteAFile.js" />
+    <Content Include="js\scenario11_TryToGetAFileWithoutGettingAnError.js" />
+    <Content Include="js\scenario1_CreateAFileInThePicturesLibrary.js" />
+    <Content Include="js\scenario2_GetTheParentFolderOfAFile.js" />
+    <Content Include="js\scenario3_WriteAndReadTextInAFile.js" />
+    <Content Include="js\scenario4_WriteAndReadBytesInAFile.js" />
+    <Content Include="js\scenario5_WriteAndReadAFileUsingAStream.js" />
+    <Content Include="js\scenario6_DisplayFileProperties.js" />
+    <Content Include="js\scenario7_TrackAFileOrFolderSoThatYouCanAccessItLater.js" />
+    <Content Include="js\scenario8_CopyAFile.js" />
+    <Content Include="js\scenario9_CompareTwoFilesToSeeIfTheyAreTheSame.js" />
+    <Content Include="Microsoft.WinJS.4.0\css\ui-dark.css" />
+    <Content Include="Microsoft.WinJS.4.0\css\ui-light.css" />
+    <Content Include="Microsoft.WinJS.4.0\js\base.js" />
+    <Content Include="Microsoft.WinJS.4.0\js\ui.js" />
+    <Content Include="Microsoft.WinJS.4.0\js\WinJS.intellisense-setup.js" />
+    <Content Include="Microsoft.WinJS.4.0\js\WinJS.intellisense.js" />
+    <Content Include="polyfill\FIleAccessPolyFill.js" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileAccessPolyFill\FileAccessPolyFill.csproj">
+      <Project>{80e9cdcc-8a54-4b34-9f3a-984f0857d87d}</Project>
+      <Name>FileAccessPolyFill</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
