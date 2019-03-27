@@ -104,49 +104,58 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="..\..\sharedcontent\js\microsoft.winjs\fonts\Symbols.ttf">
-      <Link>Microsoft.WinJS.4.0\fonts\Symbols.ttf</Link>
+    <Content Include="microsoft.winjs.4.0\fonts\Symbols.ttf">
+      <Link>Microsoft.WinJS.4.0.4.0\fonts\Symbols.ttf</Link>
     </Content>
+    <Content Include="Microsoft.WinJS.4.0\js\en-US\ui.strings.js" />
+    <Content Include="sample-utils\scenario-select.html" />
     <None Include="FileAccessCS_TemporaryKey.pfx" />
+    <None Include="media\microsoft-logo.glb" />
+    <None Include="media\Samples\README.md" />
+    <Content Include="Microsoft.WinJS.4.0\fonts\Symbols.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\sharedcontent\js\microsoft.winjs\js\en-us\ui.strings.js">
+    <Content Include="microsoft.winjs.4.0\js\en-us\ui.strings.js">
       <Link>Microsoft.WinJS.4.0\js\en-US\ui.strings.js</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\js\sample-utils\footer.html">
+    <Content Include="sample-utils\footer.html">
       <Link>sample-utils\footer.html</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\js\sample-utils\header.html">
+    <Content Include="sample-utils\footer.html" />
+    <Content Include="sample-utils\header.html">
       <Link>sample-utils\header.html</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\js\sample-utils\sample-utils.js">
+    <Content Include="sample-utils\header.html" />
+    <Content Include="sample-utils\sample-utils.js">
       <Link>sample-utils\sample-utils.js</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\js\sample-utils\scenario-select.css">
+    <Content Include="sample-utils\sample-utils.js" />
+    <Content Include="sample-utils\scenario-select.css">
       <Link>sample-utils\scenario-select.css</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\js\sample-utils\scenario-select.html">
+    <Content Include="sample-utils\scenario-select.css" />
+    <Content Include="sample-utils\scenario-select.html">
       <Link>sample-utils\scenario-select.html</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\microsoft-sdk.png">
+    <Content Include="media\microsoft-sdk.png">
       <Link>images\microsoft-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\smalltile-sdk.png">
+    <Content Include="media\smalltile-sdk.png">
       <Link>images\smalltile-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\splash-sdk.png">
+    <Content Include="media\splash-sdk.png">
       <Link>images\splash-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\squaretile-sdk.png">
+    <Content Include="media\squaretile-sdk.png">
       <Link>images\squaretile-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\storelogo-sdk.png">
+    <Content Include="media\storelogo-sdk.png">
       <Link>images\storelogo-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\tile-sdk.png">
+    <Content Include="media\tile-sdk.png">
       <Link>images\tile-sdk.png</Link>
     </Content>
-    <Content Include="..\..\sharedcontent\media\windows-sdk.png">
+    <Content Include="media\windows-sdk.png">
       <Link>images\windows-sdk.png</Link>
     </Content>
     <Content Include="css\default.css" />
@@ -175,6 +184,66 @@
     <Content Include="js\scenario7_TrackAFileOrFolderSoThatYouCanAccessItLater.js" />
     <Content Include="js\scenario8_CopyAFile.js" />
     <Content Include="js\scenario9_CompareTwoFilesToSeeIfTheyAreTheSame.js" />
+    <Content Include="media\badge-logo.png" />
+    <Content Include="media\microsoft-sdk.png" />
+    <Content Include="media\placeholder-sdk.png" />
+    <Content Include="media\placeholder.png" />
+    <Content Include="media\Samples\casting.mp4" />
+    <Content Include="media\Samples\cliff.jpg" />
+    <Content Include="media\Samples\coffee-logo.png" />
+    <Content Include="media\Samples\fishes.wmv" />
+    <Content Include="media\Samples\grapes.jpg" />
+    <Content Include="media\Samples\grapes_background.jpg" />
+    <Content Include="media\Samples\HeroImage.png" />
+    <Content Include="media\Samples\ladybug.wmv" />
+    <Content Include="media\Samples\LandscapeImage1.jpg" />
+    <Content Include="media\Samples\LandscapeImage10.jpg" />
+    <Content Include="media\Samples\LandscapeImage11.jpg" />
+    <Content Include="media\Samples\LandscapeImage12.jpg" />
+    <Content Include="media\Samples\LandscapeImage13.jpg" />
+    <Content Include="media\Samples\LandscapeImage14.jpg" />
+    <Content Include="media\Samples\LandscapeImage15.jpg" />
+    <Content Include="media\Samples\LandscapeImage16.jpg" />
+    <Content Include="media\Samples\LandscapeImage17.jpg" />
+    <Content Include="media\Samples\LandscapeImage18.jpg" />
+    <Content Include="media\Samples\LandscapeImage19.jpg" />
+    <Content Include="media\Samples\LandscapeImage2.jpg" />
+    <Content Include="media\Samples\LandscapeImage20.jpg" />
+    <Content Include="media\Samples\LandscapeImage21.jpg" />
+    <Content Include="media\Samples\LandscapeImage22.jpg" />
+    <Content Include="media\Samples\LandscapeImage23.jpg" />
+    <Content Include="media\Samples\LandscapeImage24.jpg" />
+    <Content Include="media\Samples\LandscapeImage25.jpg" />
+    <Content Include="media\Samples\LandscapeImage3.jpg" />
+    <Content Include="media\Samples\LandscapeImage4.jpg" />
+    <Content Include="media\Samples\LandscapeImage5.jpg" />
+    <Content Include="media\Samples\LandscapeImage6.jpg" />
+    <Content Include="media\Samples\LandscapeImage7.jpg" />
+    <Content Include="media\Samples\LandscapeImage8.jpg" />
+    <Content Include="media\Samples\LandscapeImage9.jpg" />
+    <Content Include="media\Samples\mobius.png" />
+    <Content Include="media\Samples\rainier.jpg" />
+    <Content Include="media\Samples\rainier_background.jpg" />
+    <Content Include="media\Samples\Ring01.jpg" />
+    <Content Include="media\Samples\Ring01.wma" />
+    <Content Include="media\Samples\Ring02.jpg" />
+    <Content Include="media\Samples\Ring02.wma" />
+    <Content Include="media\Samples\Ring03Part1.jpg" />
+    <Content Include="media\Samples\Ring03Part1.wma" />
+    <Content Include="media\Samples\Ring03Part2.jpg" />
+    <Content Include="media\Samples\Ring03Part2.wma" />
+    <Content Include="media\Samples\Ring03Part3.jpg" />
+    <Content Include="media\Samples\Ring03Part3.wma" />
+    <Content Include="media\Samples\sunset.jpg" />
+    <Content Include="media\Samples\treetops.jpg" />
+    <Content Include="media\Samples\valley.jpg" />
+    <Content Include="media\smalltile-sdk.png" />
+    <Content Include="media\splash-sdk.png" />
+    <Content Include="media\Square310x310Logo.png" />
+    <Content Include="media\squaretile-sdk.png" />
+    <Content Include="media\storelogo-sdk.png" />
+    <Content Include="media\tile-sdk.png" />
+    <Content Include="media\windows-sdk.png" />
     <Content Include="Microsoft.WinJS.4.0\css\ui-dark.css" />
     <Content Include="Microsoft.WinJS.4.0\css\ui-light.css" />
     <Content Include="Microsoft.WinJS.4.0\js\base.js" />
@@ -211,6 +280,9 @@
       <Project>{80e9cdcc-8a54-4b34-9f3a-984f0857d87d}</Project>
       <Name>FileAccessPolyFill</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
