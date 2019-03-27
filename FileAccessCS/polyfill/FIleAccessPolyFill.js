@@ -47,7 +47,9 @@
 
     window.Windows = fixNamespace(WindowsPolyFill);
 
-    addKnownFolderId();
+
+
+    //addKnownFolderId();
     addCreationCollision();
 }());
 

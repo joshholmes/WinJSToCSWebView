@@ -35,8 +35,24 @@ namespace FileAccessPolyFill
     [AllowForWeb]
     public sealed class KnownFoldersClass
     {
-//        public Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderForUserAsync(Windows.System.User user, Windows.Storage.KnownFolderId folderId)
-        public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFolder> GetFolderForUserAsync(object user, Windows.Storage.KnownFolderId folderId)
+        public KnownFoldersClass()
+        {
+            KnownFolderId = ConvertEnum(typeof(Windows.Storage.KnownFolderId));
+        }
+
+        private static List<KeyValuePair<string, int>> ConvertEnum(System.Type enumType)
+        {
+            List<KeyValuePair<string, int>> enumValues = new List<KeyValuePair<string, int>>();
+            foreach (string name in Enum.GetNames(enumType))
+            {
+                enumValues.Add(new KeyValuePair<string, int>(name, (int)Enum.Parse(typeof(Windows.Storage.KnownFolderId), name)));
+            }
+
+            return enumValues;
+        }
+
+        //        public Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderForUserAsync(Windows.System.User user, Windows.Storage.KnownFolderId folderId)
+        public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFolder> GetFolderForUserAsync(FileAccessPolyFill.WindowsR.System.User user, Windows.Storage.KnownFolderId folderId)
         {
             return this.GetFolderForUserAsyncHelper(null, Windows.Storage.KnownFolderId.PicturesLibrary).AsAsyncOperation();
         }
@@ -47,17 +63,19 @@ namespace FileAccessPolyFill
 
             return new FileAccessPolyFill.StorageFolder(content);
         }
+
+        public System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, int>> KnownFolderId { get; set; }
     }
-    
+
     [AllowForWeb]
     public sealed class StorageFolder
     {
         public StorageFolder() { }
         public StorageFolder(Windows.Storage.StorageFolder folder)
         {
-            internalFolder = folder;
+            _folder = folder;
         }
-        private Windows.Storage.StorageFolder internalFolder;
+        private Windows.Storage.StorageFolder _folder;
 
         //public IAsyncOperation<StorageFile> CreateFileAsync(string desiredName, CreationCollisionOption options)
         public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFile> CreateFileAsync(string desiredName, Windows.Storage.CreationCollisionOption options)
@@ -67,7 +85,7 @@ namespace FileAccessPolyFill
 
         private async Task<FileAccessPolyFill.StorageFile> CreateFileAsyncHelper(string desiredName, Windows.Storage.CreationCollisionOption options)
         {
-            var content = await internalFolder.CreateFileAsync(desiredName, options);
+            var content = await _folder.CreateFileAsync(desiredName, options);
 
             return new FileAccessPolyFill.StorageFile(content);
         }
@@ -79,15 +97,21 @@ namespace FileAccessPolyFill
         public StorageFile() { }
         public StorageFile(Windows.Storage.StorageFile file)
         {
-            internalFile = file;
+            _file = file;
         }
-        private Windows.Storage.StorageFile internalFile;
+        private Windows.Storage.StorageFile _file;
     }
 
     namespace WindowsR.System
     {
         [AllowForWeb]
         public sealed class User {
+            public User() { }
+            public User(Windows.System.User user)
+            {
+                _user = user;
+            }
+            private Windows.System.User _user;
         }
     }
 }
