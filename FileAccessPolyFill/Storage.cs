@@ -36,7 +36,7 @@ namespace FileAccessPolyFill
     public sealed class KnownFoldersClass
     {
 //        public Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderForUserAsync(Windows.System.User user, Windows.Storage.KnownFolderId folderId)
-        public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFolder> GetFolderForUserAsync(Windows.System.User user, Windows.Storage.KnownFolderId folderId)
+        public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFolder> GetFolderForUserAsync(object user, Windows.Storage.KnownFolderId folderId)
         {
             return this.GetFolderForUserAsyncHelper(null, Windows.Storage.KnownFolderId.PicturesLibrary).AsAsyncOperation();
         }
