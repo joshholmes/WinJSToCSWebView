@@ -24,12 +24,12 @@ namespace FileAccessPolyFill
         public StorageClass ()
         {
             this.KnownFolders = new KnownFoldersClass();
-//            this.KnownFolderId = new Windows.Storage.KnownFolderId();
+            KnownFolderId = Enum.GetNames(typeof(Windows.Storage.KnownFolderId));
+            CreationCollisionOption = Enum.GetNames(typeof(Windows.Storage.CreationCollisionOption));
         }
         public KnownFoldersClass KnownFolders { get; set; }
-        //public Windows.Storage.KnownFolderId KnownFolderId { get; set; }
-
-        //public KnownFolderIdClass KnownFolderId { get; set; }
+        public string[] KnownFolderId { get; set; }
+        public string[] CreationCollisionOption { get; set; }
     }
 
     [AllowForWeb]
@@ -37,21 +37,8 @@ namespace FileAccessPolyFill
     {
         public KnownFoldersClass()
         {
-            KnownFolderId = ConvertEnum(typeof(Windows.Storage.KnownFolderId));
         }
 
-        private static List<KeyValuePair<int, string>> ConvertEnum(System.Type enumType)
-        {
-            List<KeyValuePair<int, string>> enumValues = new List<KeyValuePair<int, string>>();
-            foreach (string name in Enum.GetNames(enumType))
-            {
-                enumValues.Add(new KeyValuePair<int, string>((int)Enum.Parse(typeof(Windows.Storage.KnownFolderId), name), name));
-            }
-
-            return enumValues;
-        }
-
-        //        public Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderForUserAsync(Windows.System.User user, Windows.Storage.KnownFolderId folderId)
         public Windows.Foundation.IAsyncOperation<FileAccessPolyFill.StorageFolder> GetFolderForUserAsync(FileAccessPolyFill.WindowsR.System.User user, Windows.Storage.KnownFolderId folderId)
         {
             return this.GetFolderForUserAsyncHelper(null, Windows.Storage.KnownFolderId.PicturesLibrary).AsAsyncOperation();
@@ -63,8 +50,6 @@ namespace FileAccessPolyFill
 
             return new FileAccessPolyFill.StorageFolder(content);
         }
-
-        private IEnumerable<KeyValuePair<int, string>> KnownFolderId { get; set; }
     }
 
     [AllowForWeb]

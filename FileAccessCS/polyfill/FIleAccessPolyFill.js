@@ -46,41 +46,4 @@
     }
 
     window.Windows = fixNamespace(WindowsPolyFill);
-
-
-
-    //addKnownFolderId();
-    addCreationCollision();
 }());
-
-function addKnownFolderId() {
-    window.Windows.Storage.KnownFolderId = {
-        0: "appCaptures",
-        1: "cameraRoll",
-        2: "documentsLibrary",
-        3: "homeGroup",
-        4: "mediaServerDevices",
-        5: "musicLibrary",
-        6: "objects3D",
-        7: "picturesLibrary",
-        8: "playlists",
-        9: "recordedCalls",
-        10: "removableDevices",
-        11: "savedPictures",
-        12: "screenshots",
-        13: "videosLibrary",
-        14: "allAppMods",
-        15: "currentAppMods"
-    };
-}
-
-
-function addCreationCollision() {
-    window.Windows.Storage.CreationCollisionOption = {
-        0: "GenerateUniqueName",
-        1: "ReplaceExisting",
-        2: "FailIfExists",
-        3: "OpenIfExists"
-    };
-}
-
