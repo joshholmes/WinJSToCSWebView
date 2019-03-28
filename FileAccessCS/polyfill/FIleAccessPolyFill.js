@@ -10,7 +10,7 @@
 //            WinJS.log && WinJS.log(error, "sample", "error");
 //        });
 //}
-; (function () {
+(function () {
     function isObject(value) {
         return typeof value === "object" &&
             value !== null;

@@ -40,12 +40,12 @@ namespace FileAccessPolyFill
             KnownFolderId = ConvertEnum(typeof(Windows.Storage.KnownFolderId));
         }
 
-        private static List<KeyValuePair<string, int>> ConvertEnum(System.Type enumType)
+        private static List<KeyValuePair<int, string>> ConvertEnum(System.Type enumType)
         {
-            List<KeyValuePair<string, int>> enumValues = new List<KeyValuePair<string, int>>();
+            List<KeyValuePair<int, string>> enumValues = new List<KeyValuePair<int, string>>();
             foreach (string name in Enum.GetNames(enumType))
             {
-                enumValues.Add(new KeyValuePair<string, int>(name, (int)Enum.Parse(typeof(Windows.Storage.KnownFolderId), name)));
+                enumValues.Add(new KeyValuePair<int, string>((int)Enum.Parse(typeof(Windows.Storage.KnownFolderId), name), name));
             }
 
             return enumValues;
@@ -64,7 +64,7 @@ namespace FileAccessPolyFill
             return new FileAccessPolyFill.StorageFolder(content);
         }
 
-        public System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, int>> KnownFolderId { get; set; }
+        private IEnumerable<KeyValuePair<int, string>> KnownFolderId { get; set; }
     }
 
     [AllowForWeb]
