@@ -106,8 +106,15 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Storage.cs" />
+    <Compile Include="Storage\File.cs" />
+    <Compile Include="Storage\FileIO.cs" />
+    <Compile Include="Storage\Folder.cs" />
+    <Compile Include="Storage\KnownFolder.cs" />
+    <Compile Include="Storage\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage\WebAllowedObjectAttribute.cs" />
+    <Compile Include="System\User.cs" />
+    <Compile Include="Windows.cs" />
     <EmbeddedResource Include="Properties\FileAccessPolyFill.rd.xml" />
   </ItemGroup>
   <ItemGroup>
