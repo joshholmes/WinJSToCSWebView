@@ -46,4 +46,8 @@
     }
 
     window.Windows = fixNamespace(WindowsPolyFill);
+
+    //WinJS.Namespace.define("Windows.Storage.Streams", {
+    //    InMemoryInMemoryRandomAccessStream: window.Windows.Storage.Streams.InMemoryInMemoryRandomAccessStream;
+    //});
 }());

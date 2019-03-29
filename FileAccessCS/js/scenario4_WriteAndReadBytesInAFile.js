@@ -30,7 +30,7 @@
     }
 
     function getBufferFromString(str) {
-        var memoryStream = new Windows.Storage.Streams.InMemoryRandomAccessStream();
+        var memoryStream = new Windows.Storage.Streams.inMemoryRandomAccessStream();
         var dataWriter = new Windows.Storage.Streams.DataWriter(memoryStream);
         dataWriter.writeString(str);
         var buffer = dataWriter.detachBuffer();

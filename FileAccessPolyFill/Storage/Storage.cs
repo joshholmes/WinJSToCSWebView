@@ -16,11 +16,14 @@ namespace FileAccessPolyFill
             KnownFolderId = Enum.GetNames(typeof(Windows.Storage.KnownFolderId));
             CreationCollisionOption = Enum.GetNames(typeof(Windows.Storage.CreationCollisionOption));
             FileIO = new FileIO();
+            Streams = new Streams();
         }
         public KnownFoldersClass KnownFolders { get; set; }
         public string[] KnownFolderId { get; set; }
         public string[] CreationCollisionOption { get; set; }
         public FileIO FileIO { get; set; }
+
+        public FileAccessPolyFill.Streams Streams { get; set; }
     }
 }
 
