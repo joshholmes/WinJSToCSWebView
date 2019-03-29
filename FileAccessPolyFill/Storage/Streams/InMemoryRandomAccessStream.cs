@@ -8,7 +8,7 @@ using Windows.Foundation.Metadata;
 namespace FileAccessPolyFill
 {
     [AllowForWeb]
-    class InMemoryRandomAccessStream
+    public sealed class InMemoryRandomAccessStream
     {
     }
 }
