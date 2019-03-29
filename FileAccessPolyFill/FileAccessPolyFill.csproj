@@ -112,6 +112,7 @@
     <Compile Include="Storage\KnownFolder.cs" />
     <Compile Include="Storage\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage\Streams\InMemoryRandomAccessStream.cs" />
     <Compile Include="Storage\WebAllowedObjectAttribute.cs" />
     <Compile Include="System\User.cs" />
     <Compile Include="Windows.cs" />
