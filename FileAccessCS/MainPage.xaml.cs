@@ -32,7 +32,6 @@ namespace FileAccessCS
 
             webView.AddWebAllowedObject("WindowsPolyFill", w);
 
-            //webView.AddWebAllowedObject("Windows.Storage.KnownFolderId", new WindowsPolyFill.Storage.KnownFolderId());
             webView.Navigate(new Uri("ms-appx-web:///default.html"));
         }
 
